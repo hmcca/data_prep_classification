@@ -19,9 +19,9 @@ merged = new_df.join(
     how='left'
 )
 
-# The merged 'split' column will be "test" where matched, else null
+# The merged 'split' column will be "test" 
 merged = merged.with_columns([
-    pl.col("split").fill_null("none")  # Or leave as null if you want
+    pl.col("split").fill_null("none")  
 ])
 
 # Save for next steps
@@ -31,7 +31,7 @@ merged.write_parquet("/gpfs/arx2/med116_mde/proj-shared/RITM0276466/new_data/raw
 total_records = merged.height
 test_count = merged.filter(pl.col("split") == "test").height
 none_count = merged.filter(pl.col("split") == "none").height
-null_count = merged.filter(pl.col("split").is_null()).height  # if you didn't use fill_null
+null_count = merged.filter(pl.col("split").is_null()).height  
 
 print(f"Total records: {total_records}")
 print(f"Test records (split == 'test'): {test_count}")
