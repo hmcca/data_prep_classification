@@ -11,8 +11,8 @@
 
 source /sw/summit/mde/med116_mde/gounley1/env600vllm.sh
 
-export HF_HOME=/lustre/orion/proj-shared/med117/gounley1/hfhome
-export HF_LOCAL_HOME=/lustre/orion/proj-shared/med117/gounley1/hfhomelocal
+# export HF_HOME=/lustre/orion/proj-shared/med117/gounley1/hfhome
+# export HF_LOCAL_HOME=/lustre/orion/proj-shared/med117/gounley1/hfhomelocal
 export HF_DATASETS_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
 export HF_EVALUATE_OFFLINE=1
